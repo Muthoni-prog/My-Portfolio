@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ruth Ndegwa — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ─── CUSTOM CURSOR ─────────────────────── -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ─── NAVIGATION ───────────────────────── -->
+  <nav id="navbar">
+    <a class="nav-logo" onclick="scrollToSection('hero')">RN</a>
+    <ul class="nav-links">
+      <li><button onclick="scrollToSection('hero')">Home</button></li>
+      <li><button onclick="scrollToSection('about')">About</button></li>
+      <li><button onclick="scrollToSection('skills')">Skills</button></li>
+      <li><button onclick="scrollToSection('projects')">Projects</button></li>
+      <li><button onclick="scrollToSection('resume')">Resume</button></li>
+      <li><button onclick="scrollToSection('contact')">Contact</button></li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+  </nav>
+
+  <!-- ─── MOBILE MENU ──────────────────────── -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" onclick="toggleMenu()">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18"/>
+        <line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+    <button onclick="scrollToSection('hero');   toggleMenu()">Home</button>
+    <button onclick="scrollToSection('about');  toggleMenu()">About</button>
+    <button onclick="scrollToSection('skills'); toggleMenu()">Skills</button>
+    <button onclick="scrollToSection('projects');toggleMenu()">Projects</button>
+    <button onclick="scrollToSection('resume'); toggleMenu()">Resume</button>
+    <button onclick="scrollToSection('contact');toggleMenu()">Contact</button>
+  </div>
+
+  <!-- ─── HERO ─────────────────────────────── -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-tag">Welcome to my portfolio</div>
+        <h1 class="hero-h1">Ruth <em>Ndegwa</em></h1>
+        <p class="hero-sub">Building intelligent, scalable digital experiences</p>
+        <p class="hero-desc">
+          I'm a passionate tech student crafting innovative solutions at the intersection
+          of design and functionality. Transforming complex problems into elegant,
+          user-centric applications.
+        </p>
+        <div class="hero-btns">
+          <button class="btn-primary" onclick="scrollToSection('projects')">
+            View Projects
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </button>
+          <button class="btn-secondary" onclick="scrollToSection('contact')">Contact Me</button>
+        </div>
+      </div>
+      <div class="hero-img-wrap">
+        <img
+          class="hero-img"
+          src="Assets\image 1.jpg"
+          alt="Ruth Ndegwa"
+          onerror="this.src='Assets\alt 1.jpg'"
+        >
+      </div>
+    </div>
+    <div class="hero-floats">
+      <div class="scroll-indicator">
+        <span></span>
+        scroll
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── ABOUT ────────────────────────────── -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+
+        <!-- Image -->
+        <div class="about-img-wrap reveal">
+          <div class="about-img-frame">
+            <img
+              class="about-img"
+              src="Assets\Image 2.jpg"
+              alt="About Ruth Ndegwa"
+              onerror="this.src='Assets\alt 2.jpg'"
+            >
+          </div>
+        </div>
+
+        <!-- Text -->
+        <div class="about-text">
+          <div class="section-label reveal">About me</div>
+          <h2 class="section-title reveal reveal-delay-1">Crafting Digital <em>Excellence</em></h2>
+          <div class="section-divider reveal reveal-delay-1"></div>
+          <p class="reveal reveal-delay-2">
+            As a dedicated tech student and aspiring software developer, I'm driven by an insatiable
+            curiosity to understand how technology shapes our world. My journey began with a simple
+            "Hello World" and has evolved into a passion for creating sophisticated, user-centered applications.
+          </p>
+          <p class="reveal reveal-delay-2">
+            I thrive on solving complex problems and transforming abstract ideas into tangible solutions.
+            Whether it's building responsive web applications, optimizing algorithms, or exploring emerging
+            technologies, I approach every challenge with enthusiasm and a commitment to excellence.
+          </p>
+          <div class="about-cards">
+            <div class="about-card reveal reveal-delay-1">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+              </svg>
+              <h4>Clean Code</h4>
+              <p>Maintainable, scalable solutions</p>
+            </div>
+            <div class="about-card reveal reveal-delay-2">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/>
+                <line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/>
+                <line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/>
+                <line x1="4.93" y1="19.07" x2="7.76" y2="16.24"/><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"/>
+              </svg>
+              <h4>Innovation</h4>
+              <p>Cutting-edge technologies</p>
+            </div>
+            <div class="about-card reveal reveal-delay-3">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <line x1="22" y1="2" x2="11" y2="13"/>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+              </svg>
+              <h4>Performance</h4>
+              <p>Optimized for speed</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SKILLS ───────────────────────────── -->
+  <section id="skills">
+    <div class="container">
+      <div style="text-align:center; margin-bottom:4rem;">
+        <div class="section-label reveal" style="justify-content:center;">Technical Skills</div>
+        <h2 class="section-title reveal reveal-delay-1" style="text-align:center;">My <em>Toolkit</em></h2>
+        <div class="section-divider reveal reveal-delay-1" style="margin:0 auto 1rem;"></div>
+        <p class="section-desc reveal reveal-delay-2" style="margin:0 auto; text-align:center;">
+          A comprehensive toolkit for building modern, performant applications
+        </p>
+      </div>
+      <div class="skills-grid">
+
+        <!-- Frontend -->
+        <div class="skill-card reveal">
+          <div class="skill-card-header">
+            <div class="skill-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+              </svg>
+            </div>
+            <h3>Frontend</h3>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-label"><span>HTML</span><span>98%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="98"></div></div>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-label"><span>CSS</span><span>99%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="99"></div></div>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-label"><span>JavaScript</span><span>88%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-label"><span>TypeScript</span><span>85%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+          </div>
+        </div>
+       
+        <!-- Backend -->
+        <div class="skill-card reveal reveal-delay-1">
+          <div class="skill-card-header">
+            <div class="skill-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="2" y="3" width="20" height="14" rx="2"/>
+                <line x1="8" y1="21" x2="16" y2="21"/>
+                <line x1="12" y1="17" x2="12" y2="21"/>
+              </svg>
+            </div>
+            <h3>Backend</h3>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-label"><span>Node.js</span><span>98%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="98"></div></div>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-label"><span>Python</span><span>80%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-label"><span>C++</span><span>95%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="95"></div></div>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-label"><span>Java</span><span>85%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-label"><span>Python</span><span>85%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-label"><span>C</span><span>95%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="95"></div></div>
+          </div>
+        </div>
+
+        <!-- Databases -->
+        <div class="skill-card reveal">
+          <div class="skill-card-header">
+            <div class="skill-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+              </svg>
+            </div>
+            <h3>Databases</h3>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-label"><span>MySQL</span><span>98%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="98"></div></div>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-label"><span>PostgreSQL</span><span>99%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="95"></div></div>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="skill-card reveal reveal-delay-2">
+          <div class="skill-card-header">
+            <div class="skill-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+              </svg>
+            </div>
+            <h3>Tools</h3>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-label"><span>Git</span><span>85%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-label"><span>Github</span><span>99%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="78"></div></div>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-label"><span>Postman</span><span>99%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="78"></div></div>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-label"><span>Supabase</span><span>97%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="78"></div></div>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-label"><span>Docker</span><span>80%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="78"></div></div>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-label"><span>VS Code</Code></span><span>99%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="78"></div></div>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-label"><span>Vercel</span><span>99%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="78"></div></div>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-label"><span>Figma</span><span>90%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="78"></div></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PROJECTS ─────────────────────────── -->
+  <section id="projects">
+    <div class="container">
+      <div style="margin-bottom:3rem;">
+        <div class="section-label reveal">Featured Work</div>
+        <h2 class="section-title reveal reveal-delay-1">Selected <em>Projects</em></h2>
+        <div class="section-divider reveal reveal-delay-1"></div>
+        <p class="section-desc reveal reveal-delay-2">
+          Innovative solutions that showcase my technical expertise and creative problem-solving
+        </p>
+      </div>
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <div class="project-card reveal">
+          <div class="project-img-wrap">
+            <img class="project-img" src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80" alt="E-Commerce Platform">
+            <div class="project-overlay"></div>
+          </div>
+          <div class="project-body">
+            <h3>MediMind – The Self-Evolving Medical Intelligence</h3>
+            <p>A next-generation healthcare chatbot that combines symbolic AI (MeTTa) with neural AI (LLM) to deliver accurate, explainable, and self-improving medical insights.
+            <div class="project-tags">
+              <span class="project-tag">HTML</HTML></span>
+              <span class="project-tag">Python</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="demo">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
+                  <polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+                </svg>
+                Live Demo
+              </a>
+              <a href="https://github.com/obedomwenga/Medimind" class="code">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+                </svg>
+                View Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card reveal reveal-delay-1">
+          <div class="project-img-wrap">
+            <img class="project-img" src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&q=80" alt="AI Task Manager">
+            <div class="project-overlay"></div>
+          </div>
+          <div class="project-body">
+            <h3>AI Task Manager</h3>
+            <p>An intelligent task management system powered by machine learning algorithms that predicts task priorities and suggests optimal scheduling.</p>
+            <div class="project-tags">
+              <span class="project-tag">React</span>
+              <span class="project-tag">Python</span>
+              <span class="project-tag">TensorFlow</span>
+              <span class="project-tag">FastAPI</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="demo">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
+                  <polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+                </svg>
+                Live Demo
+              </a>
+              <a href="#" class="code">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+                </svg>
+                View Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card reveal reveal-delay-2">
+          <div class="project-img-wrap">
+            <img class="project-img" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" alt="Analytics Dashboard">
+            <div class="project-overlay"></div>
+          </div>
+          <div class="project-body">
+            <h3>Real-Time Analytics Dashboard</h3>
+            <p>A responsive data visualization dashboard that processes and displays real-time metrics with interactive charts and customizable widgets.</p>
+            <div class="project-tags">
+              <span class="project-tag">React</span>
+              <span class="project-tag">D3.js</span>
+              <span class="project-tag">WebSocket</span>
+              <span class="project-tag">Node.js</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="demo">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
+                  <polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+                </svg>
+                Live Demo
+              </a>
+              <a href="#" class="code">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+                </svg>
+                View Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card reveal reveal-delay-3">
+          <div class="project-img-wrap">
+            <img class="project-img" src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=800&q=80" alt="Social Media Hub">
+            <div class="project-overlay"></div>
+          </div>
+          <div class="project-body">
+            <h3>Social Media Hub</h3>
+            <p>A unified platform for managing multiple social media accounts with scheduled posting, analytics tracking, and engagement monitoring.</p>
+            <div class="project-tags">
+              <span class="project-tag">React</span>
+              <span class="project-tag">Node.js</span>
+              <span class="project-tag">Redis</span>
+              <span class="project-tag">PostgreSQL</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="demo">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
+                  <polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+                </svg>
+                Live Demo
+              </a>
+              <a href="#" class="code">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+                </svg>
+                View Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── RESUME ───────────────────────────── -->
+  <section id="resume">
+    <div class="container">
+      <div style="margin-bottom:3rem;">
+        <div class="section-label reveal">Background</div>
+        <h2 class="section-title reveal reveal-delay-1">Resume & <em>Experience</em></h2>
+        <div class="section-divider reveal reveal-delay-1"></div>
+        <p class="section-desc reveal reveal-delay-2">
+          A proven track record of academic excellence, practical experience, and continuous learning
+        </p>
+      </div>
+      <div class="resume-cards">
+
+        <div class="resume-card reveal">
+          <div class="resume-card-head">
+            <div class="resume-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+              </svg>
+            </div>
+            <h3>Education</h3>
+          </div>
+          <ul>
+            <li>B.Sc. Information Technology</li>
+            <li>Multimedia Univesity of Kenya</li>
+            <li>Degree Classification: In Progress</li>
+            <li>Expected Graduation: 2028</li>
+          </ul>
+        </div>
+
+        <div class="resume-card reveal reveal-delay-1">
+          <div class="resume-card-head">
+            <div class="resume-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="2" y="7" width="20" height="14" rx="2"/>
+                <path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/>
+              </svg>
+            </div>
+            <h3>Experience</h3>
+          </div>
+          <ul>
+            <li>Built in Meta Hackathon </li>
+            <li>Built full-stack web applications using modern web technologies</li>
+            <li>Blockchain Volunteer Experience</li>
+            <li>Paid Freelance Project(Ongoing)</li>
+             <li>School and Academic Projects</li>
+          </ul>
+        </div>
+
+        <div class="resume-card reveal reveal-delay-2">
+          <div class="resume-card-head">
+            <div class="resume-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="8" r="6"/>
+                <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/>
+              </svg>
+            </div>
+            <h3>Achievements</h3>
+          </div>
+          <ul>
+            <li>Secured 2nd place in the Meta hackathon 2025 as part of a collaborative development team</li>
+            <li>Successfully completed multiple academic software development projects</li>
+            <li>Currently developing a paid real-world software project for a private client</li>
+            <li>Currently Managing a website for a Realty Company</li>
+            <li>Designed and developed a personal developer portfolio website</li>
+            <li>Created a Cafe's Website</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="resume-cta reveal">
+        <h3>Ready to see my full credentials?</h3>
+        <p>
+          Download my comprehensive resume to learn more about my skills, projects, and professional journey.
+          Let's explore how I can contribute to your team's success.
+        </p>
+        <button class="btn-primary" style="margin:0 auto;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          Download CV
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CONTACT ──────────────────────────── -->
+  <section id="contact">
+    <div class="container">
+      <div style="margin-bottom:3rem;">
+        <div class="section-label reveal">Get In Touch</div>
+        <h2 class="section-title reveal reveal-delay-1">Let's <em>Connect</em></h2>
+        <div class="section-divider reveal reveal-delay-1"></div>
+        <p class="section-desc reveal reveal-delay-2">
+          Have a project in mind or just want to chat? I'd love to hear from you.
+        </p>
+      </div>
+      <div class="contact-grid">
+
+        <!-- Left: Info -->
+        <div class="reveal">
+          <h3 class="contact-intro-title">Get in Touch</h3>
+          <p class="contact-intro-desc">
+            I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+          </p>
+          <div class="contact-methods">
+            <a href="mailto:alex.carter@email.com" class="contact-method">
+              <div class="contact-method-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </div>
+              <div class="contact-method-text">
+                <small>Email</small>
+                <span>ndegwaruth81@gmail.com
+                </span>
+              </div>
+            </a>
+            <a href="https://linkedin.com/in/ruth-ndegwa" class="contact-method" target="_blank">
+              <div class="contact-method-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/>
+                  <rect x="2" y="9" width="4" height="12"/>
+                  <circle cx="4" cy="4" r="2"/>
+                </svg>
+              </div>
+              <div class="contact-method-text">
+                <small>LinkedIn</small>
+                <span>/in/Ruth Ndegwa</span>
+              </div>
+            </a>
+            <a href="https://github.com/Muthoni-prog" class="contact-method" target="_blank">
+              <div class="contact-method-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+                </svg>
+              </div>
+              <div class="contact-method-text">
+                <small>GitHub</small>
+                <span>@muthonis-prog</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Form -->
+        <div class="reveal reveal-delay-1">
+          <div class="contact-form">
+            <div class="form-group">
+              <label>Name</label>
+              <input type="text" placeholder="Your Name">
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" placeholder="your.email@example.com">
+            </div>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea placeholder="Tell me about your project..."></textarea>
+            </div>
+            <button class="btn-primary" onclick="handleFormSubmit(this)" style="align-self:flex-start;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="22" y1="2" x2="11" y2="13"/>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+              </svg>
+              Send Message
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ───────────────────────────── -->
+  <footer>
+    <div class="footer-logo">RN</div>
+    <p class="footer-copy">© 2026 Ruth Ndegwa — Crafted with precision &amp; passion</p>
+    <div class="footer-socials">
+      <a href="https://github.com" target="_blank" title="GitHub">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+        </svg>
+      </a>
+      <a href="https://linkedin.com" target="_blank" title="LinkedIn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/>
+          <rect x="2" y="9" width="4" height="12"/>
+          <circle cx="4" cy="4" r="2"/>
+        </svg>
+      </a>
+      <a href="mailto:alex.carter@email.com" title="Email">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+          <polyline points="22,6 12,13 2,6"/>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+  <!-- ─── JAVASCRIPT ───────────────────────── -->
+  <script src="script.js"></script>
+
+</body>
+</html>
