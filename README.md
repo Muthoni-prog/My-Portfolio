@@ -22,14 +22,15 @@ JavaScript (Vanilla) – Interactivity & dynamic behavior
 Google Fonts – Typography system (Outfit, DM Mono, Cormorant Garamond)
 SVG Icons – Lightweight UI icons
 🎯 Features
-⚡ Fully responsive modern UI
-🎨 Custom cursor + smooth animations
-🧭 Section-based navigation (Home, About, Skills, Projects, Contact)
-📱 Mobile-friendly hamburger menu
-💡 Interactive project cards
-📊 Animated skill progress bars
-📬 Contact section with social links integration
-🧠 Clean modular structure for scalability
+Fully responsive modern UI
+Custom cursor + smooth animations
+Section-based navigation (Home, About, Skills, Projects, Contact)
+Mobile-friendly hamburger menu
+Interactive project cards
+Animated skill progress bars
+Contact section with social links integration
+Clean modular structure for scalability
+
 📁 Project Structure
 portfolio/
 │
@@ -37,6 +38,7 @@ portfolio/
 ├── style.css         # Styling & animations
 ├── script.js         # Interactivity & UI logic
 └── Assets/           # Images and media
+
 📸 Sections Breakdown
 🏠 Hero Section
 
@@ -74,12 +76,14 @@ Demonstrate real-world development capability
 Showcase UI/UX design skills
 Present full-stack readiness
 Serve as a professional developer identity hub
+
 📌 Future Improvements
 Add backend contact form integration
 Include blog section for technical writing
 Add project filtering system
 Integrate dark/light mode toggle
 Improve accessibility (ARIA + keyboard navigation)
+
 📬 Contact
 📧 Email: ndegwaruth81@gmail.com
 💼 LinkedIn: Ruth Ndegwa
