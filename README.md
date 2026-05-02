@@ -13,7 +13,7 @@ turn complexity into clarity, and ideas into functional digital experiences.
 
 👉 View Portfolio
 
-(Replace with your GitHub Pages / Vercel / Netlify link)
+(https://my-portfolio-pink-two-76.vercel.app/)
 
 🛠️ Built With
 HTML5 – Semantic structure
